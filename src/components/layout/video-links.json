@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "url": {
+    "videoCode": {
       "type": "string"
     }
   }

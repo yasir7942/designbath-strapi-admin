@@ -8,7 +8,7 @@ export interface LayoutVideoLinks extends Schema.Component {
     description: '';
   };
   attributes: {
-    url: Attribute.String;
+    videoCode: Attribute.String;
   };
 }
 
