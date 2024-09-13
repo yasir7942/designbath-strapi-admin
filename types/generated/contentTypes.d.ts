@@ -868,6 +868,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::tag.tag'
     >;
+    haveStock: Attribute.Boolean & Attribute.DefaultTo<true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

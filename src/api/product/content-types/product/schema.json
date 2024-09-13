@@ -70,6 +70,10 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "products"
+    },
+    "haveStock": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
