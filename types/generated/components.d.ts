@@ -1,20 +1,20 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface LayoutVideoLinks extends Schema.Component {
+export interface LayoutVideoLinks extends Struct.ComponentSchema {
   collectionName: 'components_video_links_video_links';
   info: {
+    description: '';
     displayName: 'VideoLink';
     icon: 'link';
-    description: '';
   };
   attributes: {
-    videoCode: Attribute.String;
+    videoCode: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'layout.video-links': LayoutVideoLinks;
     }
   }

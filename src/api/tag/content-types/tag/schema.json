@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tag",
     "pluralName": "tags",
-    "displayName": "Tag"
+    "displayName": "Tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,14 +21,15 @@
       "type": "string"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "index": {
       "type": "string",
@@ -42,6 +44,15 @@
       "relation": "manyToMany",
       "target": "api::product.product",
       "mappedBy": "tags"
+    },
+    "frontView": {
+      "type": "enumeration",
+      "enum": [
+        "Grid",
+        "List"
+      ],
+      "required": true,
+      "default": "List"
     }
   }
 }

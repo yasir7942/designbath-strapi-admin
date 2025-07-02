@@ -53,6 +53,15 @@
     },
     "attractiveText": {
       "type": "string"
+    },
+    "frontView": {
+      "type": "enumeration",
+      "enum": [
+        "Grid",
+        "List"
+      ],
+      "default": "List",
+      "required": true
     }
   }
 }
