@@ -424,6 +424,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     details: Schema.Attribute.Text;
+    gallary: Schema.Attribute.Media<'images' | 'files', true>;
     haveStock: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     IsFixValueDiscount: Schema.Attribute.Boolean &
@@ -441,6 +442,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     salePrice: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    stock: Schema.Attribute.Decimal;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -481,6 +483,7 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
       Schema.Attribute.Unique;
     products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
+    showToHome: Schema.Attribute.Boolean;
     slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

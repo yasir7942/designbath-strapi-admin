@@ -74,6 +74,17 @@
     "haveStock": {
       "type": "boolean",
       "default": true
+    },
+    "stock": {
+      "type": "decimal"
+    },
+    "gallary": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

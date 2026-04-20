@@ -53,6 +53,9 @@
       ],
       "required": true,
       "default": "List"
+    },
+    "showToHome": {
+      "type": "boolean"
     }
   }
 }
